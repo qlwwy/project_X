@@ -41,3 +41,4 @@ if __name__ == "__main__":
     print(mask_account_card(card_str))
     print(mask_account_card(account_str))
     print(get_date(date_str))
+
