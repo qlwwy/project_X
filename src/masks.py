@@ -20,10 +20,3 @@ def get_mask_account(account_info):
         raise ValueError("Номер счета должен содержать не менее 6 цифр.")
     masked_number = f"{account_number[-4:]}"
     return ' '.join(parts[:-1]) + ' ' + masked_number
-
-
-card_info = input()
-print(get_mask_card_number(card_info))
-
-account_info = input()
-print(get_mask_account(account_info))
