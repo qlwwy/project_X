@@ -1,0 +1,18 @@
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError
+divide error: ZeroDivisionError
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+my_function ok
+my_function error: ZeroDivisionError. Inputs: (1, 0), {}
+my_function error: ZeroDivisionError. Inputs: (1, 0), {}
+my_function ok
+my_function error: ZeroDivisionError. Inputs: (1, 0), {}
+my_function error: ZeroDivisionError. Inputs: (1, 0), {}
+my_function ok
+my_function error: ZeroDivisionError. Inputs: (1, 0), {}
+my_function error: ZeroDivisionError. Inputs: (1, 0), {}
+my_function ok
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}

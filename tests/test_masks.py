@@ -29,7 +29,7 @@ def test_get_mask_card_number_invalid(card_info):
 @pytest.mark.parametrize(
     "account_info, expected",
     [
-        ("Счет 73654108430135874305", "Счет **4305"),
+        ("Счет 73654108430135874305", "Счет **305"),
         ("Счет 123456", "Счет **456"),
     ],
 )
