@@ -1,11 +1,7 @@
 import functools
-
+import sys
 
 def log(filename=None):
-    """
-    Декоратор для логирования выполнения функции
-    """
-
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
@@ -27,7 +23,5 @@ def log(filename=None):
                     if "error" in message:
                         sys.stderr.write(message + "\n")
             return result
-
         return wrapper
-
     return decorator

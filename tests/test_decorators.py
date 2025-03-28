@@ -1,7 +1,5 @@
 import pytest
-
-from decorators import log
-
+from src.decorators import log
 
 @log()
 def add(x, y):
@@ -10,14 +8,12 @@ def add(x, y):
     """
     return x + y
 
-
 @log(filename="test_log.txt")
 def divide(x, y):
     """
     Функция деления двух чисел
     """
     return x / y
-
 
 def test_log_to_console(capsys):
     """
@@ -26,7 +22,6 @@ def test_log_to_console(capsys):
     assert add(1, 2) == 3
     captured = capsys.readouterr()
     assert "add ok" in captured.out
-
 
 def test_log_to_file():
     """
@@ -38,7 +33,6 @@ def test_log_to_file():
     with open("test_log.txt", "r") as f:
         logs = f.read()
         assert "divide error: ZeroDivisionError" in logs
-
 
 def test_log_exception_to_console(capsys):
     """
