@@ -1,25 +1,44 @@
-import pytest
-from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
+from src.generators import (
+    card_number_generator,
+    filter_by_currency,
+    transaction_descriptions,
+)
 
 transactions = [
-    {"id": 1, "operationAmount": {"currency": {"code": "USD"}}, "description": "Описание 1"},
-    {"id": 2, "operationAmount": {"currency": {"code": "EUR"}}, "description": "Описание 2"},
-    {"id": 3, "operationAmount": {"currency": {"code": "USD"}}, "description": "Описание 3"},
+    {
+        "id": 1,
+        "operationAmount": {"currency": {"code": "USD"}},
+        "description": "Описание 1",
+    },
+    {
+        "id": 2,
+        "operationAmount": {"currency": {"code": "EUR"}},
+        "description": "Описание 2",
+    },
+    {
+        "id": 3,
+        "operationAmount": {"currency": {"code": "USD"}},
+        "description": "Описание 3",
+    },
 ]
-
 
 
 def test_filter_by_currency():
     usd_transactions = list(filter_by_currency(transactions, "USD"))
     assert len(usd_transactions) == 2
-    assert all(t['operationAmount']['currency']['code'] == "USD" for t in usd_transactions)
+    assert all(
+        t["operationAmount"]["currency"]["code"] == "USD" for t in usd_transactions
+    )
 
     eur_transactions = list(filter_by_currency(transactions, "EUR"))
     assert len(eur_transactions) == 1
-    assert all(t['operationAmount']['currency']['code'] == "EUR" for t in eur_transactions)
+    assert all(
+        t["operationAmount"]["currency"]["code"] == "EUR" for t in eur_transactions
+    )
 
     empty_transactions = list(filter_by_currency(transactions, "RUB"))
     assert len(empty_transactions) == 0
+
 
 def test_transaction_descriptions():
     descriptions = list(transaction_descriptions(transactions))
@@ -27,6 +46,7 @@ def test_transaction_descriptions():
 
     empty_descriptions = list(transaction_descriptions([]))
     assert empty_descriptions == []
+
 
 def test_card_number_generator():
     card_numbers = list(card_number_generator(1, 3))

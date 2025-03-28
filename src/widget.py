@@ -1,4 +1,6 @@
 from src import masks
+
+
 def mask_account_card(card_name):
     """
     Принимает один аргумент — строку, содержащую тип и номер карты или счета

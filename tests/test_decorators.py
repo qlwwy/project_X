@@ -2,12 +2,14 @@ import pytest
 
 from decorators import log
 
+
 @log()
 def add(x, y):
     """
     Функция сложения двух чисел
     """
     return x + y
+
 
 @log(filename="test_log.txt")
 def divide(x, y):
@@ -16,6 +18,7 @@ def divide(x, y):
     """
     return x / y
 
+
 def test_log_to_console(capsys):
     """
     Тест для проверки логирования в консоль
@@ -23,6 +26,7 @@ def test_log_to_console(capsys):
     assert add(1, 2) == 3
     captured = capsys.readouterr()
     assert "add ok" in captured.out
+
 
 def test_log_to_file():
     """
@@ -35,10 +39,12 @@ def test_log_to_file():
         logs = f.read()
         assert "divide error: ZeroDivisionError" in logs
 
+
 def test_log_exception_to_console(capsys):
     """
     Тест для проверки логирования исключений в консоль
     """
+
     @log()
     def fail():
         raise ValueError("Test error")
