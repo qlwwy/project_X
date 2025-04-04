@@ -17,3 +17,9 @@ my_function ok
 divide error: ZeroDivisionError. Inputs: (1, 0), {}
 divide error: ZeroDivisionError. Inputs: (1, 0), {}
 divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
+divide error: ZeroDivisionError. Inputs: (1, 0), {}
